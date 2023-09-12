@@ -16,71 +16,23 @@ import project2 from "./../assets/project-2.png";
 import project3 from "./../assets/project-3.png";
 import CV from "./../assets/Mark Maher CV.pdf";
 
-function App() {
-  document.title = "Mark Maher"
-  function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
+// components
+import Header from "./../components/Header.jsx";
+import Footer from "./../components/Footer.jsx";
+
+function Home() {
+  document.title = "Mark Maher";
 
   return (
     <>
-      <nav id="desktop-nav">
-        <div className="logo">Mark Maher</div>
-        <div>
-          <ul className="nav-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="hamburger-nav">
-        <div className="logo">Mark Maher</div>
-        <div className="hamburger-menu">
-          <div className="hamburger-icon" onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="menu-links">
-            <li>
-              <a href="#about" onClick={toggleMenu}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#experience" onClick={toggleMenu}>
-                Experience
-              </a>
-            </li>
-            <li>
-              <a href="#projects" onClick={toggleMenu}>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={toggleMenu}>
-                Contact
-              </a>
-            </li>
-          </div>
-        </div>
-      </nav>
+      <Header />
       <section id="profile">
         <div className="section__pic-container">
-          <img src={profilePic} id="profilePic" alt="Mark Maher profile picture" />{" "}
+          <img
+            src={profilePic}
+            id="profilePic"
+            alt="Mark Maher profile picture"
+          />{" "}
         </div>
         <div className="section__text">
           <p className="section__text__p1">Hello, I am</p>
@@ -102,7 +54,10 @@ function App() {
               src={linkedin}
               alt="My LinkedIn profile"
               className="icon"
-              onClick={() => (location.href = "https://www.linkedin.com/in/mark-maher-034724290/")}
+              onClick={() =>
+                (location.href =
+                  "https://www.linkedin.com/in/mark-maher-034724290/")
+              }
             />
             <img
               src={github}
@@ -118,7 +73,12 @@ function App() {
         <h1 className="title">About Me</h1>
         <div className="section-container">
           <div className="section__pic-container">
-            <img src={aboutPic} id="aboutPic" alt="Profile picture" className="about-pic" />{" "}
+            <img
+              src={aboutPic}
+              id="aboutPic"
+              alt="Profile picture"
+              className="about-pic"
+            />{" "}
           </div>
           <div className="about-details-container">
             <div className="about-containers">
@@ -150,12 +110,9 @@ function App() {
             </div>
             <div className="text-container">
               <p>
-                I am a seasoned full-stack web developer with 2 years of
-                expertise in backend development and 1 year in frontend.
-                Proficient in React, Node.js, Express, Mongoose, HTML, CSS, and
-                JavaScript. I specialize in crafting dynamic web applications
-                using these technologies, delivering robust and user-friendly
-                solutions.
+                👨‍💻 Full Stack Web Dev 🌐 | ExpressJS, Node, React, MongoDB,
+                JsonVerse | Turning Ideas into Interactive Websites! 🚀
+                #WebDevelopment #CodingGenius
               </p>
             </div>
           </div>
@@ -388,29 +345,9 @@ function App() {
           </div>
         </div>
       </section>
-      <footer>
-        <nav>
-          <div className="nav-links-container">
-            <ul className="nav-links">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#experience">Experience</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <p>Copyright &#169; 2023 Mark Maher. All Rights Reserved.</p>
-      </footer>
+      <Footer />
     </>
   );
 }
 
-export default App;
+export default Home;

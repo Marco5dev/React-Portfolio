@@ -9,18 +9,18 @@
   margin: 0 20px;
 }
 
-img {
+.nfImage {
   justify-content: center;
   align-items: center;
   align-content: center;
   max-width: 700px;
 }
 
-h1 {
+.nfH1 {
   font-size: 50px;
   font-family: 'Kalam', cursive;
 }
 
-p {
+.ndP {
   font-size: 25px;
 }

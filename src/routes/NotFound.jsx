@@ -12,10 +12,10 @@ function App() {
 
   return (
     <div className="centered">
-      <img src={nfIcon} alt="404 error with person looking for-bro" />
-      <h1>404 Not Found</h1>
-      <p>{description}</p>
-      <p>You can go back to the <Link to={"/"} >Home Page</Link></p>
+      <img className="nfImage" src={nfIcon} alt="404 error with person looking for-bro" />
+      <h1 className="nfH1" >404 Not Found</h1>
+      <p className="nfP" >{description}</p>
+      <p className="nfP" >You can go back to the <Link to={"/"} >Home Page</Link></p>
     </div>
   );
 }
