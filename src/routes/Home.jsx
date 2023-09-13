@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./../assets/css/style.css";
 import "./../assets/css/mediaqueries.css";
 import aboutPic from "./../assets/about-pic.jpeg";
@@ -19,9 +19,44 @@ import CV from "./../assets/Mark Maher CV.pdf";
 // components
 import Header from "./../components/Header.jsx";
 import Footer from "./../components/Footer.jsx";
+import InfiniteTypingAnimation from "./../components/InfiniteTypingAnimation.jsx";
 
 function Home() {
   document.title = "Mark Maher";
+  const sentences = [
+    "Full Stack Web Developer",
+    "Back End Developer",
+    "Front End Developer",
+    "Freelancer",
+  ];
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    function checkScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (
+          sectionTop < windowHeight * 0.75 &&
+          sectionTop > -section.clientHeight
+        ) {
+          // When the section is within 75% of the viewport and not fully above it
+          section.style.opacity = "1";
+          section.style.transform = "translateY(0)";
+          section.style.transition = "opacity 1s, transform 1s";
+        } else {
+          // When the section is not in the viewport
+          section.style.opacity = "0";
+          section.style.transform = "translateY(0)";
+          section.style.transition = "none";
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+  }, []);
 
   return (
     <>
@@ -37,7 +72,9 @@ function Home() {
         <div className="section__text">
           <p className="section__text__p1">Hello, I am</p>
           <h1 className="title">Mark Maher</h1>
-          <p className="section__text__p2">Full Stack web Developer</p>
+          <p className="section__text__p2z">
+            <InfiniteTypingAnimation sentences={sentences} />
+          </p>
           <div className="btn-container">
             <button className="btn btn-color-2" onClick={() => window.open(CV)}>
               Download CV
