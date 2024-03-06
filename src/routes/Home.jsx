@@ -44,14 +44,14 @@ function Home() {
           sectionTop > -section.clientHeight
         ) {
           // When the section is within 75% of the viewport and not fully above it
-          section.style.opacity = "1";
-          section.style.transform = "translateY(0)";
-          section.style.transition = "opacity 1s, transform 1s";
+          sections.style.opacity = "1";
+          sections.style.transform = "translateY(0)";
+          sections.style.transition = "opacity 1s, transform 1s";
         } else {
           // When the section is not in the viewport
-          section.style.opacity = "0";
-          section.style.transform = "translateY(0)";
-          section.style.transition = "none";
+          sections.style.opacity = "0";
+          sections.style.transform = "translateY(0)";
+          sections.style.transition = "none";
         }
       });
     }
@@ -373,7 +373,7 @@ function Home() {
               className="icon contact-icon email-icon"
             />
             <p>
-              <a href="mailto:marco5dev@outlook.com">marco5dev@outlook.com</a>
+              <a href="mailto:contact@marco5dev.site">contact@marco5dev.site</a>
             </p>
           </div>
           <div className="contact-info-container">
