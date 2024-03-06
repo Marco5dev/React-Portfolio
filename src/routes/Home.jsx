@@ -62,7 +62,7 @@ function Home() {
   return (
     <>
       <Header />
-      <section id="profile">
+      <section id="profile" style{{opacity: "1"}}>
         <div className="section__pic-container">
           <img
             src={"https://cdn.discordapp.com/attachments/990918045604151377/1210708066174242866/100785809.jpg?ex=65f4c540&is=65e25040&hm=11b1cb3206a3a7943ab9b52ed24f0535b27a7113834c3689c6c113b5abae1f97&"}
