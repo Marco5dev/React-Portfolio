@@ -10,6 +10,7 @@ import email from "./../assets/email.png";
 import experience from "./../assets/experience.png";
 import github from "./../assets/github.png";
 import linkedin from "./../assets/linkedin.png";
+import discord from "./../assets/discord.png";
 import profilePic from "./../assets/profile-pic.jpeg";
 import project1 from "./../assets/project-1.png";
 import project2 from "./../assets/project-2.png";
@@ -31,7 +32,7 @@ function Home() {
   ];
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll(".animation");
 
     function checkScroll() {
       sections.forEach((section) => {
@@ -64,7 +65,7 @@ function Home() {
       <section id="profile">
         <div className="section__pic-container">
           <img
-            src={profilePic}
+            src={"https://cdn.discordapp.com/attachments/990918045604151377/1210708066174242866/100785809.jpg?ex=65f4c540&is=65e25040&hm=11b1cb3206a3a7943ab9b52ed24f0535b27a7113834c3689c6c113b5abae1f97&"}
             id="profilePic"
             alt="Mark Maher profile picture"
           />{" "}
@@ -105,13 +106,13 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className={"animation"}>
         <p className="section__text__p1">Get To Know More</p>
         <h1 className="title">About Me</h1>
         <div className="section-container">
           <div className="section__pic-container">
             <img
-              src={aboutPic}
+              src={"https://cdn.discordapp.com/attachments/990918045604151377/1215075656929386536/414495467_918707239756832_8894023306361586383_n.jpg?ex=65fb6e63&is=65e8f963&hm=e7cbae73e0c1eddeed890c4b51d31b9e1fc9719eab0e247a7a1876f2becda5f5&"}
               id="aboutPic"
               alt="Profile picture"
               className="about-pic"
@@ -123,7 +124,7 @@ function Home() {
                 <img src={experience} alt="Experience icon" className="icon" />
                 <h3>Experience</h3>
                 <p>
-                  2+ years <br />
+                  3+ years <br />
                   Backend Development
                 </p>
               </div>
@@ -131,7 +132,7 @@ function Home() {
                 <img src={experience} alt="Experience icon" className="icon" />
                 <h3>Experience</h3>
                 <p>
-                  1+ years <br />
+                  2+ years <br />
                   Frontend Development
                 </p>
               </div>
@@ -161,7 +162,7 @@ function Home() {
           onClick={() => (location.href = "./#experience")}
         />
       </section>
-      <section id="experience">
+      <section id="experience" className={"animation"}>
         <p className="section__text__p1">Explore My</p>
         <h1 className="title">Experience</h1>
         <div className="experience-details-container">
@@ -256,6 +257,13 @@ function Home() {
                     <p>Experienced</p>
                   </div>
                 </article>
+                <article>
+                  <img src={checkmark} alt="Experience icon" className="icon" />
+                  <div>
+                    <h3>YARN</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
@@ -267,7 +275,7 @@ function Home() {
           onClick={() => (location.href = "./#projects")}
         />
       </section>
-      <section id="projects">
+      <section id="projects" className={"animation"}>
         <p className="section__text__p1">Browse My Recent</p>
         <h1 className="title">Projects</h1>
         <div className="experience-details-container">
@@ -354,7 +362,7 @@ function Home() {
           onClick={() => (location.href = "./#contact")}
         />
       </section>
-      <section id="contact">
+      <section id="contact" className={"animation"}>
         <p className="section__text__p1">Get in Touch</p>
         <h1 className="title">Contact Me</h1>
         <div className="contact-info-upper-container">
@@ -377,6 +385,18 @@ function Home() {
             <p>
               <a href="https://www.linkedin.com/in/mark-maher-034724290/">
                 LinkedIn
+              </a>
+            </p>
+          </div>
+          <div className="contact-info-container">
+            <img
+              src={discord}
+              alt="Discord"
+              className="icon contact-icon"
+            />
+            <p>
+              <a href="https://discord.com/users/966418622165704814">
+                Discord
               </a>
             </p>
           </div>
