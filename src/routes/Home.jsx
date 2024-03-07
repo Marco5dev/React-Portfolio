@@ -32,10 +32,10 @@ function Home() {
   ];
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".animation");
+    const sections = document.getElementsByClassName("animation");
 
     function checkScroll() {
-      sections.forEach((section) => {
+      sections.forEach((sections) => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
