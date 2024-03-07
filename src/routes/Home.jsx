@@ -32,10 +32,10 @@ function Home() {
   ];
 
   useEffect(() => {
-    const sections = document.getElementsByClassName("animation");
+    const section = document.querySelectorAll("section");
 
     function checkScroll() {
-      sections.forEach((sections) => {
+      section.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
@@ -44,14 +44,14 @@ function Home() {
           sectionTop > -section.clientHeight
         ) {
           // When the section is within 75% of the viewport and not fully above it
-          sections.style.opacity = "1";
-          sections.style.transform = "translateY(0)";
-          sections.style.transition = "opacity 1s, transform 1s";
+          section.style.opacity = "1";
+          section.style.transform = "translateY(0)";
+          section.style.transition = "opacity 1s, transform 1s";
         } else {
           // When the section is not in the viewport
-          sections.style.opacity = "0";
-          sections.style.transform = "translateY(0)";
-          sections.style.transition = "none";
+          section.style.opacity = "0";
+          section.style.transform = "translateY(0)";
+          section.style.transition = "none";
         }
       });
     }
@@ -62,7 +62,7 @@ function Home() {
   return (
     <>
       <Header />
-      <section id="profile" style={{ opacity: "1",}}>
+      <div id="profile" style={{ opacity: "1",}}>
         <div className="section__pic-container">
           <img
             src={"https://cdn.discordapp.com/attachments/990918045604151377/1210708066174242866/100785809.jpg?ex=65f4c540&is=65e25040&hm=11b1cb3206a3a7943ab9b52ed24f0535b27a7113834c3689c6c113b5abae1f97&"}
@@ -105,7 +105,7 @@ function Home() {
             />
           </div>
         </div>
-      </section>
+      </div>
       <section id="about" className={"animation"}>
         <p className="section__text__p1">Get To Know More</p>
         <h1 className="title">About Me</h1>
