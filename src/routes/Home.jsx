@@ -16,6 +16,8 @@ import project1 from "./../assets/project-1.png";
 import project2 from "./../assets/project-2.png";
 import project3 from "./../assets/project-3.png";
 import CV from "./../assets/Mark Maher CV.pdf";
+import markimg1 from "./../assets/mark-img1.jpg";
+import markimg2 from "./../assets/mark-img2.jpg";
 
 // components
 import Header from "./../components/Header.jsx";
@@ -65,7 +67,7 @@ function Home() {
       <div id="profile" style={{ opacity: "1",}}>
         <div className="section__pic-container">
           <img
-            src={"https://cdn.discordapp.com/attachments/990918045604151377/1210708066174242866/100785809.jpg?ex=65f4c540&is=65e25040&hm=11b1cb3206a3a7943ab9b52ed24f0535b27a7113834c3689c6c113b5abae1f97&"}
+            src={markimg1}
             id="profilePic"
             alt="Mark Maher profile picture"
           />{" "}
@@ -112,7 +114,7 @@ function Home() {
         <div className="section-container">
           <div className="section__pic-container">
             <img
-              src={"https://cdn.discordapp.com/attachments/990918045604151377/1215075656929386536/414495467_918707239756832_8894023306361586383_n.jpg?ex=65fb6e63&is=65e8f963&hm=e7cbae73e0c1eddeed890c4b51d31b9e1fc9719eab0e247a7a1876f2becda5f5&"}
+              src={markimg2}
               id="aboutPic"
               alt="Profile picture"
               className="about-pic"
