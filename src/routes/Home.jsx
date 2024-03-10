@@ -321,7 +321,7 @@ function Home() {
                 </button>
                 <button
                   className="btn btn-color-2 project-btn"
-                  onClick={() => (location.href = "https://st-george.repl.co/")}
+                  onClick={() => (location.href = "https://stgeorge.marco5dev.site/")}
                 >
                   Live Demo
                 </button>
