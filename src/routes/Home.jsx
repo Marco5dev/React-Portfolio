@@ -322,6 +322,7 @@ function Home() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() => (location.href = "https://stgeorge.marco5dev.site/")}
+                  disabled
                 >
                   Live Demo
                 </button>
@@ -344,6 +345,14 @@ function Home() {
                   }
                 >
                   Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() =>
+                    (location.href = "https://jsonverse.marco5dev.site")
+                  }
+                >
+                  Docs
                 </button>
                 <button
                   className="btn btn-color-2 project-btn"
