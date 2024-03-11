@@ -299,6 +299,7 @@ function Home() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() => (location.href = "https://knisty.repl.co")}
+                  disabled
                 >
                   Live Demo
                 </button>
@@ -322,7 +323,7 @@ function Home() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() => (location.href = "https://stgeorge.marco5dev.site/")}
-                  disabled
+                  
                 >
                   Live Demo
                 </button>

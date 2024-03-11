@@ -250,6 +250,12 @@ section {
   border-radius: 2rem;
 }
 
+.btn:disabled {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+  pointer-events: none;
+}
+
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
